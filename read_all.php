@@ -3,18 +3,13 @@
 // 1) Faz conexão com banco de dados e configurações
 require('conn.php');
 
+
 // 2) Escrever a query
 $sql = <<<SQL
 
 
 
 SELECT * FROM contatos
-WHERE status = 'ativo';
-
-$nome = $user['nome'];
-$email = $sql['email'];
-$assunto = $sql['assunto'];
-$mensagem = $sql['mensagem']
 
 SQL;
 
@@ -38,10 +33,10 @@ while ($user = $res->fetch_assoc()) :
     echo <<<HTML
     
 <tr>
-    <td>{$nome} </td>
-    <td>{$email}</td>
-    <td>{$assunto}</td>
-    <td>{$mensagem}</td>
+    <td>{$user['nome']} </td>
+    <td>{$user['email']}</td>
+    <td>{$user['assunto']}</td>
+    <td>{$user['mensagem']}</td>
 </tr>
     
 HTML;
