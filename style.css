@@ -49,6 +49,7 @@ button[type="reset"]:hover {
 
 form p:last-child {
     text-align: center;
+    text-align: right;
 }
 
 form {
